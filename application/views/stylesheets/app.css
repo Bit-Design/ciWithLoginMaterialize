@@ -1,0 +1,14 @@
+h1{
+	font-size: 3em;
+}
+.borderradius{
+	border-radius: 15px;
+}
+.center, .container .row .center{
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+.floatleft{
+	float: left;
+}
