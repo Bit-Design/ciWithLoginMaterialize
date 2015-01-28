@@ -9,14 +9,16 @@
 	<script>
 		var app_url = '<?php echo base_url() . APPPATH; ?>';
 	</script>
+</head>
+<body>
+<div class="container"> <!--remove container div if full width is needed -->
+		<?php echo $header; ?>
+		<?php echo $content; ?>
+		<?php echo $footer; ?>
+</div>
 	<script src="<?php echo base_url() . APPPATH ?>views/js/jquery-2.1.1.min.js"></script>
 	<script src="<?php echo base_url() . APPPATH ?>views/js/materialize.min.js"></script>
 	<!-- self made -->
 	<script src="<?php echo base_url() . APPPATH ?>views/js/master.js"></script>
-</head>
-<body>
-		<?php echo $header; ?>
-		<?php echo $content; ?>
-		<?php echo $footer; ?>
 </body>
 </html>
