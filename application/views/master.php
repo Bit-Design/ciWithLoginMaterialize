@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Page Title - <?php echo $title; ?></title>
+	<title><?php echo $title; ?> | Company</title>
 	<link rel="stylesheet" href="<?php echo base_url() . APPPATH ?>views/css/materialize.min.css" />
 	<link rel="stylesheet" href="<?php echo base_url() . APPPATH ?>views/stylesheets/app.css" />
 	<script>
@@ -14,7 +14,6 @@
 		<?php echo $header; ?>
 		<?php echo $content; ?>
 		<?php echo $footer; ?>
-	
 	<script src="<?php echo base_url() . APPPATH ?>views/js/jquery-2.1.1.min.js"></script>
 	<script src="<?php echo base_url() . APPPATH ?>views/js/materialize.min.js"></script>
 	<script type="text/javascript">

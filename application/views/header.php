@@ -60,7 +60,7 @@
 <header class="clearboth blue lighten-2">
 <div class="row nomarginpadding">
       <a class="button-collapse hide-on-large-only white-text floatleft" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
-      <h1 class="white-text center-align nomargin">Welkom</h1>
+      <h3 class="white-text center-align"><?php echo $title; ?></h3>
 </div>
 </header>
 
