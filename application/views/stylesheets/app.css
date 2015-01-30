@@ -12,3 +12,30 @@ h1{
 .floatleft{
 	float: left;
 }
+.clearboth{
+	clear: both;
+}
+header div.row a.button-collapse{
+	font-size: 50px;
+	padding-left: 20px;
+}
+header div h1{
+	margin: 0px;
+	padding: 15px 0;
+}
+.nomarginpadding{
+	margin: 0;
+	padding: 0;
+}
+#logo{
+	height: 95px;
+}
+#nav-mobile{
+	clear: both;	
+}
+@media only screen and (min-width : 993px){
+	div#wrapcontainer.container{
+		position: absolute;
+		left: calc(240px + 5%) ;
+	}	
+}

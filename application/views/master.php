@@ -11,18 +11,17 @@
 	</script>
 </head>
 <body>
-	<div class="container"> <!--remove container div if full width is needed -->
 		<?php echo $header; ?>
 		<?php echo $content; ?>
 		<?php echo $footer; ?>
-	</div>
+	
 	<script src="<?php echo base_url() . APPPATH ?>views/js/jquery-2.1.1.min.js"></script>
 	<script src="<?php echo base_url() . APPPATH ?>views/js/materialize.min.js"></script>
 	<script type="text/javascript">
 	//added for navbar working
 	$(document).ready(function(){
 		$('.dropdown-button').dropdown();
-		$('.button-collapse').sideNav({menuWidth: 240, activationWidth: 70, edge: 'right'});
+		$('.button-collapse').sideNav({menuWidth: 240, activationWidth: 70, edge: 'left'});
 		$('.slider').slider({full_width: true, indicators: true, height: 410, transition: 500, interval: 5000});
 	});
 </script>
