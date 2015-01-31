@@ -35,13 +35,20 @@ header div h3{
 #nav-mobile{
 	clear: both;	
 }
+.container{
+	width: 100%;
+	padding: 0;
+}
+
 @media only screen and (min-width : 993px){
 	div#wrapcontainer.container{
 		position: absolute;
 		left: calc(240px + 5%) ;
 	}	
 	header div h3{
-	font-size: 3em;
-}
-
+		font-size: 3em;
+	}
+	.container{
+		width: 70%;
+	}
 }
