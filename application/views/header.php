@@ -67,7 +67,7 @@
 <?php
 if ($this->session->userdata('user') != null) {
   ?>
-  <div class="row red lighten-3">
+  <div class="row nomargin red lighten-3">
      <div class="col s6 right-align">
         <?php echo $this->session->userdata('user')->name ?>
     </div>

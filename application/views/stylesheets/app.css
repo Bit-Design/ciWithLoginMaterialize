@@ -39,7 +39,12 @@ header div h3{
 	width: 100%;
 	padding: 0;
 }
-
+.bold{
+	font-weight: bold;
+}
+.row.nomargin{
+	margin:0px;
+}
 @media only screen and (min-width : 993px){
 	div#wrapcontainer.container{
 		position: absolute;

@@ -5,7 +5,9 @@ class Login extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('tekst_model');
 	}
+
 
 	public function index()
 	{
@@ -28,7 +30,7 @@ class Login extends CI_Controller {
 			$this->session->set_userdata( 'melding', 'Combinatie email en wachtwoord foutief.' );
 			$partials = array('header' => 'header', 'content' => 'login', 'footer' => 'footer');
 			$this->template->load('master', $partials, $data);
-					
+
 		}
 	}
 	public function afmelden(){
@@ -36,6 +38,3 @@ class Login extends CI_Controller {
 		redirect('home');
 	}
 }
-
-/* End of file login.php */
-/* Location: ./application/controllers/login.php */
