@@ -35,8 +35,6 @@
           echo "' >" . $tekst->tekst . "</p>";
         }
         ?>
-        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum ut nesciunt quo delectus officia totam aliquid dolorem rerum, qui tenetur?</p>
-        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis similique odit placeat odio officiis blanditiis doloribus unde accusamus non iure esse accusantium sed est impedit et, dicta a velit vel dignissimos. Voluptatum harum saepe id ex est, inventore ut fugit!</p>
       </div>
       <div class="col s12 m4">
         <table class="striped bordered">

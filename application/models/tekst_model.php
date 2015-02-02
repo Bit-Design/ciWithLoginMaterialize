@@ -22,5 +22,20 @@
 			$teksten = $query->result();
 			return $teksten;
 		}
+		function delete($id) {
+			$this->db->where('id', $id);
+			$this->db->delete('artikel');
+		}
+		function update($id, $tekst, $volgorde, $vet, $groter)
+		{
+			$data = array(
+				'tekst' => $tekst,
+				'volgorde' => $volgorde,
+				'vet' => $vet,
+				'groter' => $groter
+				);
+			$this->db->where('id', $id);
+			$this->db->update('tekst', $data);
+		}
 
 	}
