@@ -4,7 +4,7 @@
 		<?php
 		if($this->session->userdata('melding') != null){
 			echo '<p class="red">' . $this->session->userdata('melding') . '</p>';	
-			$this->session->unset_userdata('melding');			
+			$this->session->unset_userdata('melding');
 		}
 		?>
 		<?php echo form_open('login/aanmelden');?>

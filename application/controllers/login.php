@@ -6,6 +6,7 @@ class Login extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('tekst_model');
+
 	}
 
 
@@ -23,6 +24,7 @@ class Login extends CI_Controller {
 		if($this->authex->login($email, $password)){
 			$data['melding'] = 'U bent nu aangemeld';
 			$data['title'] = 'Home';
+			$data['teksten'] = $this->tekst_model->getAllByPagina($data['title']);
 			$partials = array('header' => 'header', 'content' => 'home', 'footer' => 'footer');
 			$this->template->load('master', $partials, $data);
 		}else{
