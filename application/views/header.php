@@ -1,32 +1,32 @@
 <ul id="nav-mobile" class="side-nav fixed">
   <li id="logo"></li>
-  <li class="bold"><?php echo anchor('home', 'Home'); ?></li>
-  <li class="bold"><?php echo anchor('home/overons', 'Over ons'); ?></li>
+  <li class="bold home"><?php echo anchor('home', 'Home'); ?></li>
+  <li class="bold overons"><?php echo anchor('home/overons', 'Over ons'); ?></li>
   <ul class="collapsible collapsible-accordion">
     <li class="bold"><a class="collapsible-header">Sparen &amp; beleggen</a>
       <div class="collapsible-body" style="">
         <ul>
-          <li><?php echo anchor('home/sparen', 'Sparen via bank'); ?></li>
-          <li><?php echo anchor('home/beleggen', 'Sparen via bank'); ?></li>
-          <li><?php echo anchor('home/beleggingsverzekeringen', 'Beleggingsverzekeringen'); ?></li>
+          <li class="sparen"><?php echo anchor('home/sparen', 'Sparen via bank'); ?></li>
+          <li class="beleggen"><?php echo anchor('home/beleggen', 'Beleggen via bank'); ?></li>
+          <li class="beleggingsverzekeringen"><?php echo anchor('home/beleggingsverzekeringen', 'Beleggingsverzekeringen'); ?></li>
         </ul>
       </div>
     </li>
   </ul>
   <li class="bold"><?php echo anchor('home/vermogensbeheer', 'Vermogensbeheer'); ?></li>
   <ul class="collapsible collapsible-accordion">
-    <li class="bold"><a class="collapsible-header">Verzekeringen</a>
+    <li class="bold"><a class="collapsible-header ">Verzekeringen</a>
       <div class="collapsible-body" style="">
         <ul>
-          <li><?php echo anchor('home/verzekeringenparticulieren', 'Sparen via bank'); ?></li>
-          <li><?php echo anchor('home/verzekeringenkmos', 'Sparen via bank'); ?></li>
+          <li class="verzekeringenparticulieren"><?php echo anchor('home/verzekeringenparticulieren', 'Particulieren'); ?></li>
+          <li class="verzekeringenkmos"><?php echo anchor('home/verzekeringenkmos', "KMO's"); ?></li>
         </ul>
       </div>
     </li>
   </ul>
-  <li class="bold"><?php echo anchor('home/leningen', 'Leningen'); ?></li>
-  <li class="bold"><?php echo anchor('home/contact', 'Contact'); ?></li>
-  <li class="bold"><?php echo anchor('home/webbanking', 'Webbanking'); ?></li>
+  <li class="bold leningen"><?php echo anchor('home/leningen', 'Leningen'); ?></li>
+  <li class="bold contact"><?php echo anchor('home/contact', 'Contact'); ?></li>
+  <li class="bold "><?php echo anchor('home/webbanking', 'Webbanking'); ?></li>
   <li class="bold"><?php echo anchor('home/assurmifid', 'AssurMiFID'); ?></li>
 </ul>
 
@@ -38,7 +38,6 @@
       <h3 class="white-text center-align"><?php echo $title; ?></h3>
     </div>
   </header>
-
   <?php
   if ($this->session->userdata('user') != null) {
     ?>

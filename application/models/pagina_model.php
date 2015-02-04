@@ -7,8 +7,8 @@ class pagina_model extends CI_Model {
 		parent::__construct();
 	}
 
-	function get($naam) {
-		$this->db->where('naam', $naam);
+	function get($viewName) {
+		$this->db->where('viewName', $viewName);
 		$query = $this->db->get('pagina');
 		return $query->row();
 	}

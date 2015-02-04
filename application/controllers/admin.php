@@ -5,8 +5,6 @@ class Admin extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('artikel_model');
-		$this->load->model('categorie_model');
 		//------------------------------------security--------------------------------
 		$this->load->helper(array('form', 'url'));
 		if(!$this->authex->loggedIn()){
@@ -24,24 +22,31 @@ class Admin extends CI_Controller {
 	{
 
 	}
-	function update($id, $viewName)
+	function updateTekst($id, $viewName)
 	{
 		$tekst = $this->input->post('tekst');
 		$volgorde = $this->input->post('volgorde');
 		$vet = $this->input->post('vet');
 		$groter = $this->input->post('groter');
-		$categorieId = $this->input->post('categorieId');
 		$this->tekst_model->update($id, $tekst, $volgorde, $vet, $groter);
 		$this->session->set_userdata( 'melding', 'Tekst aangepast.' );
 		$partials = array('header' => 'header', 'content' => $viewName, 'footer' => 'footer');
 		$this->template->load('master', $partials, $data);
 	}
-	function delete($tekstId)
+	function updateUur($id)
+	{
+		$uur = $this->input->post('uur');
+		$this->openinsuren_model->update($id, $uur);
+		$this->session->set_userdata( 'melding', 'Uur aangepast.' );
+		$partials = array('header' => 'header', 'content' => 'home', 'footer' => 'footer');
+		$this->template->load('master', $partials, $data);
+	}
+	function delete($tekstId, $viewName)
 	{
 		$this->db->delete('tekst', array('id' => $artikelId));
 		$data['title'] = 'Verwijderd';
 		$this->session->set_userdata( 'melding', 'Juweel verwijderd.' );
-		$partials = array('header' => 'header_admin', 'content' => 'melding', 'footer' => 'footer');
+		$partials = array('header' => 'header_admin', 'content' => $viewName, 'footer' => 'footer');
 		$this->template->load('master', $partials, $data);
 	}
 }

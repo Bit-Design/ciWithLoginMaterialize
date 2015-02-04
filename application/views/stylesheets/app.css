@@ -45,6 +45,16 @@ header div h3{
 .row.nomargin{
 	margin:0px;
 }
+div.slider ul.slides li img{
+	max-width: 100%;
+	height: auto;
+}
+div.slider{
+	height: auto;
+}
+div.slider{
+	height: 100%;
+}
 @media only screen and (min-width : 993px){
 	div#wrapcontainer.container{
 		position: absolute;

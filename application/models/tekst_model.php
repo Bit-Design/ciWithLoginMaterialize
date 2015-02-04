@@ -13,9 +13,9 @@
 			return $query->row();
 		}
 
-		function getAllByPagina($paginaNaam) {
+		function getAllByPagina($viewName) {
 			$this->load->model('pagina_model');
-			$pagina = $this->pagina_model->get($paginaNaam);
+			$pagina = $this->pagina_model->get($viewName);
 			$this->db->order_by('volgorde', 'asc');
 			$this->db->where('paginaId', $pagina->id);
 			$query = $this->db->get('tekst');

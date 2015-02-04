@@ -6,7 +6,7 @@ class Login extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('tekst_model');
-
+		$this->load->model('openingsuren_model');
 	}
 
 
@@ -23,8 +23,9 @@ class Login extends CI_Controller {
 		$password = $this->input->post('password');
 		if($this->authex->login($email, $password)){
 			$data['melding'] = 'U bent nu aangemeld';
-			$data['title'] = 'Home';
+			$data['title'] = 'Delta Lloyd Kampenhout';
 			$data['teksten'] = $this->tekst_model->getAllByPagina($data['title']);
+			$data['openingsuren'] = $this->openingsuren_model->getAll();
 			$partials = array('header' => 'header', 'content' => 'home', 'footer' => 'footer');
 			$this->template->load('master', $partials, $data);
 		}else{
@@ -35,6 +36,12 @@ class Login extends CI_Controller {
 
 		}
 	}
+	public function loginNeeded(){
+		$data['title'] = 'Aanmelden';
+		$partials = array('header' => 'header', 'content' => 'login', 'footer' => 'footer');
+		$this->template->load('master', $partials, $data);
+	}
+
 	public function afmelden(){
 		$this->authex->logout();
 		redirect('home');
