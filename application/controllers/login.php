@@ -24,9 +24,10 @@ class Login extends CI_Controller {
 		if($this->authex->login($email, $password)){
 			$data['melding'] = 'U bent nu aangemeld';
 			$data['title'] = 'Delta Lloyd Kampenhout';
-			$data['teksten'] = $this->tekst_model->getAllByPagina($data['title']);
+			$data['viewName'] = 'home';
+			$data['teksten'] = $this->tekst_model->getAllByPagina($data['viewName']);
 			$data['openingsuren'] = $this->openingsuren_model->getAll();
-			$partials = array('header' => 'header', 'content' => 'home', 'footer' => 'footer');
+			$partials = array('header' => 'header', 'content' => $data['viewName'], 'footer' => 'footer');
 			$this->template->load('master', $partials, $data);
 		}else{
 			$data['title'] = 'Aanmelden';

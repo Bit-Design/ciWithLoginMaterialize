@@ -1,6 +1,6 @@
         <footer class="section blue lighten-2">
           <div class="footer-copyright">
-            <div class="container">
+            <div class="container center-align">
             <a class="white-text" href="http://www.bitdesign.be">© BitDesign</a>
 <!--             <a class="grey-text text-lighten-4 right" href="#!">AssurMiFID</a> -->
             </div>

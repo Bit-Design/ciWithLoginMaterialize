@@ -55,6 +55,19 @@ div.slider{
 div.slider{
 	height: 100%;
 }
+/*overwrite of color from materialize*/
+ul.side-nav .collapsible-body li.active, ul.side-nav.fixed .collapsible-body li.active{
+	background-color: #64B5F6; 
+}
+.tooltipped{
+	cursor: pointer;
+}
+.btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i{
+	font-size: 2em;
+}
+textarea{
+	height: 10rem;
+}
 @media only screen and (min-width : 993px){
 	div#wrapcontainer.container{
 		position: absolute;
