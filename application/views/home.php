@@ -34,10 +34,10 @@
             echo "<div id='modal" . $tekst->id ."' class='modal'>";
             echo "<h4>Paragraaf aanpassen</h4>";
             echo "<textarea>" . $tekst->tekst . "</textarea>";
-            echo "<div class='action-bar'>";
-            echo "<a href='#' class='waves-effect waves-green btn-flat modal-action left-align'><i class='fa fa-save fa-4x'></i> opslaan</a><br>";
-            echo "<a href='#' class='waves-effect waves-green btn-flat modal-action left-align'><i class='fa fa-trash fa-4x'></i>tekst verwijderen</a>";
-            echo "<a href='#' class='waves-effect waves-green btn-flat modal-action modal-close'><i class='fa fa-undo fa-4x'></i> annuleren</a>";
+            echo "<div class='action-bar center-align'>";
+            echo "<a href='#' class='waves-effect waves-green btn-flat modal-action'><i class='fa fa-save fa-4x'></i> opslaan</a><br>";
+            echo "<a href='#' class='waves-effect waves-red btn-flat modal-action'><i class='fa fa-trash fa-4x'></i>tekst verwijderen</a>";
+            echo "<a href='#' class='waves-effect waves-gray btn-flat modal-action modal-close'><i class='fa fa-undo fa-4x'></i> annuleren</a>";
             echo "</div>";
             echo "</div>";
             //end of modal code======================
