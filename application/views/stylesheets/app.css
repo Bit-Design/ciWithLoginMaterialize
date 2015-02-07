@@ -75,6 +75,16 @@ p.tooltipped:hover{
 div.action-bar.center-align{
 	text-align: center;
 }
+.bigplus{
+	font-size: 3em;
+	background-color: rgb(142, 229, 150);
+}
+label{
+	color: black;
+}
+label.first{
+	margin-right: 30px;
+}
 @media only screen and (min-width : 993px){
 	div#wrapcontainer.container{
 		position: absolute;

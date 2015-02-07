@@ -22,15 +22,33 @@
 			$teksten = $query->result();
 			return $teksten;
 		}
+		function getNextVolgorde($paginaId){
+			$this->db->select_max('volgorde');
+			$this->db->where('paginaId', $paginaId);
+			$query = $this->db->get('tekst');
+			return $query->row()->volgorde + 1;
+		}
+		function insert($paginaId, $tekst, $vet, $groter)
+		{
+			//volgorde automatisch 1 hoger dan max
+			$data = array(
+				'paginaId' => $paginaId,
+				'tekst' => $tekst,
+				'volgorde' => $this->getNextVolgorde($paginaId),
+				'groter' => $groter,
+				'vet' => $vet
+				);
+			$this->db->insert('tekst', $data);
+			return $this->db->insert_id();
+		}
 		function delete($id) {
 			$this->db->where('id', $id);
-			$this->db->delete('artikel');
+			$this->db->delete('tekst');
 		}
-		function update($id, $tekst, $volgorde, $vet, $groter)
+		function update($id, $tekst, $vet, $groter)
 		{
 			$data = array(
 				'tekst' => $tekst,
-				'volgorde' => $volgorde,
 				'vet' => $vet,
 				'groter' => $groter
 				);

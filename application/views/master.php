@@ -6,7 +6,7 @@
 	<title><?php echo $title; ?> | Yvan Raymaekers</title>
 	<link rel="stylesheet" href="<?php echo base_url() . APPPATH ?>views/css/materialize.min.css" />
 	<link rel="stylesheet" href="<?php echo base_url() . APPPATH ?>views/stylesheets/app.css" />
-	<link rel="stylesheet" href="<?php echo base_url() . APPPATH ?>views/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="<?php echo base_url() . APPPATH ?>views/css/font-awesome.min.css"> -->
 </head>
 <body>
 	<?php echo $header; ?>

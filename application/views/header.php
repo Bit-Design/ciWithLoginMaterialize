@@ -35,7 +35,17 @@
   <header class="clearboth blue lighten-2">
     <div class="row nomarginpadding">
       <a class="button-collapse hide-on-large-only white-text floatleft" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
-      <h3 class="white-text center-align"><?php echo $title; ?></h3>
+      <?php
+      if ($this->session->userdata('user') != null && $this->session->userdata('user')->type == 'admin') {
+        ?>
+        <h3 class="white-text center-align">ADMIN</h3>
+        <?php
+      }else{
+        ?>
+        <h3 class="white-text center-align"><?php echo $title; ?></h3>
+        <?php
+      }
+      ?>
     </div>
   </header>
   <?php
