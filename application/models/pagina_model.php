@@ -12,4 +12,4 @@ class pagina_model extends CI_Model {
 		$query = $this->db->get('pagina');
 		return $query->row();
 	}
-}
+}?>

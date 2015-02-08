@@ -30,8 +30,8 @@ class Login extends CI_Controller {
 			$partials = array('header' => 'header', 'content' => $data['viewName'], 'footer' => 'footer');
 			$this->template->load('master', $partials, $data);
 		}else{
-			$data['title'] = 'Aanmelden';
 			$this->session->set_userdata( 'melding', 'Combinatie email en wachtwoord foutief.' );
+			$data['title'] = 'Aanmelden';
 			$partials = array('header' => 'header', 'content' => 'login', 'footer' => 'footer');
 			$this->template->load('master', $partials, $data);
 

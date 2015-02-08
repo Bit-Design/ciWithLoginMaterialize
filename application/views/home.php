@@ -2,24 +2,16 @@
     <ul class="slides">
       <li>
         <img src="<?php echo base_url() . APPPATH ?>views/images/slider1.jpg">
-        <div class="black-text bold caption right-align">
+<!--         <div class="black-text bold caption right-align">
           <h3>Grote tekst</h3>
           <h5 class="black-text">Kleine tekst</h5>
         </div>
+ -->      </li>
+      <li>
+        <img src="<?php echo base_url() . APPPATH ?>views/images/slider1.jpg">
       </li>
       <li>
         <img src="<?php echo base_url() . APPPATH ?>views/images/slider1.jpg">
-        <div class="black-text caption left-align">
-          <h3>Grote tekst</h3>
-          <h5 class="light black-text">Kleine tekst</h5>
-        </div>
-      </li>
-      <li>
-        <img src="<?php echo base_url() . APPPATH ?>views/images/slider1.jpg">
-        <div class="black-text caption right-align">
-          <h3>Grote tekst</h3>
-          <h5 class="light black-text">Kleine tekst</h5>
-        </div>
       </li>
     </ul>
   </div>

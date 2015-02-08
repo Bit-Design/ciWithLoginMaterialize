@@ -5,6 +5,7 @@ class Admin extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
+		// $this->output->enable_profiler(TRUE);
 		$this->load->model('tekst_model');
 		$this->load->model('openingsuren_model');
 		//------------------------------------security--------------------------------
@@ -40,7 +41,6 @@ class Admin extends CI_Controller {
 	}
 	function insertTekst($viewName)
 	{
-		$this->output->enable_profiler(TRUE);
 		$tekst = $this->input->post('tekstplus');
 		$vet = $this->input->post('vetplus');
 		$groter = $this->input->post('groterplus');

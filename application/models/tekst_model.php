@@ -1,4 +1,4 @@
-	<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 	class tekst_model extends CI_Model {
 
@@ -56,4 +56,4 @@
 			$this->db->update('tekst', $data);
 		}
 
-	}
+	}?>
