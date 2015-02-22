@@ -38,11 +38,11 @@
       <?php
       if ($this->session->userdata('user') != null && $this->session->userdata('user')->type == 'admin') {
         ?>
-        <h3 class="white-text center-align">ADMIN</h3>
+        <h1 class="white-text center-align">ADMIN</h1>
         <?php
       }else{
         ?>
-        <h3 class="white-text center-align"><?php echo $title; ?></h3>
+        <h1 class="white-text center-align"><?php echo $title; ?></h1>
         <?php
       }
       ?>

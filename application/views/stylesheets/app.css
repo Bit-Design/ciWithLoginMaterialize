@@ -1,5 +1,6 @@
 html{
 	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
 }
 h1{
 	font-size: 3em;
@@ -23,14 +24,22 @@ header div.row a.button-collapse{
 	padding-top: 10px;
 	padding-left: 20px;
 }
-header div h3{
-	font-size: 2em;
+header div h1{
+	width: 100%;
+	padding-top: 17px;
+	line-height: normal;
+	font-size: 20px;
 	margin: 0px;
-	padding: 15px 0;
+	padding: 5 0;
+}
+main div.row div h1{
+	font-size: 20px;
+	font-weight: bold;
 }
 .nomarginpadding{
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 #logo{
 	height: 95px;
@@ -45,6 +54,9 @@ header div h3{
 .container{
 	width: 100%;
 	padding: 0;
+}
+main{
+	padding: 0px 10px;
 }
 .bold{
 	font-weight: bold;
@@ -94,6 +106,22 @@ label.first{
 }
 .modal{
 	width: 80%;
+}
+@media only screen and (min-width : 760px){
+	header div h1{
+		padding-top: 5px;
+		line-height: 6rem;
+		font-size: 40px;
+	}
+	main div.row div h1{
+		font-size: 35px;
+	}
+	header div.row a.button-collapse{
+		font-size: 40px;
+		padding-top: 20px;
+		padding-left: 30px;
+	}
+
 }
 @media only screen and (min-width : 993px){
 	div#wrapcontainer.container{
